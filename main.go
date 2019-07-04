@@ -41,9 +41,9 @@ func init() {
 	router = routerInstance.SetupRouter()
 
 	if runMigration == true {
-		dbMigration, error := data.NewDbMigration(&configuration)
-		if error != nil {
-			glog.Fatalf("Failed instantiate dbmigration : %s", error)
+		dbMigration, err := data.NewDbMigration(&configuration)
+		if err != nil {
+			glog.Fatalf("Failed instantiate dbmigration : %s", err)
 		}
 
 		var count = 0
@@ -59,14 +59,14 @@ func init() {
 }
 
 func migrate(db *data.DbMigration, seed bool) error {
-	success, error := db.Migrate(seed)
+	success, err := db.Migrate(seed)
 
-	if error != nil {
-		glog.Fatalf("Failed migrate: %s", error)
+	if err != nil {
+		glog.Fatalf("Failed migrate: %s", err)
 	}
 
 	glog.V(2).Infof("database migration : %s", success)
-	return error
+	return err
 }
 
 func main() {
