@@ -1,6 +1,6 @@
 FROM golang:1.10
 
-WORKDIR /go/src//currency-exchange
+WORKDIR /go/src/currency-exchange
 COPY . .
 
 RUN go get -u github.com/golang/dep/cmd/dep \
