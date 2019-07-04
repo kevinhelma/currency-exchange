@@ -11,3 +11,5 @@ RUN go get -u github.com/golang/dep/cmd/dep \
 
 EXPOSE 8080
 VOLUME [ "/var/log/converter-server" ]
+
+ENTRYPOINT ["go", "run", "main.go"]
