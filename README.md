@@ -30,14 +30,14 @@ $	POST /daily '{"date":"2019-07-05", "from":"IDR", "To":"USD", "rate":"0.000071"
 	>**Response**
 	>{"data":{"from":"IDR","to":"USD","average":0.000071,"variance":0,"data":[{"Date":"2019-07-05T00:00:00Z","Rate":0.000071}]},"result":"success"}
 	
-- View Tracked Exchange Rates [http://localhost:8080/api/v1/tracked](http://localhost:8080/api/v1/tracked)
+- View Tracked Exchange Rates [http://localhost:8080/api/v1/tracked](http://localhost:8080/api/v1/tracked) [post]
 	> **Request**
 	> $ POST /tracked '{"Date":"2019-07-05", "Exchanges":[{"From":"IDR","To":"USD"}]}'
 	
 	> **Response**
 	> {"data":[{"from":"IDR","to":"USD","rate":"insufficient data","7-day-avg":""}],"result":"success"}
 
-- Remove Exchange Rates [http://localhost:8080/api/v1/remove](http://localhost:8080/api/v1/remove)
+- Remove Exchange Rates [http://localhost:8080/api/v1/remove](http://localhost:8080/api/v1/remove) [post]
 	> **Request**
 	> $ POST /remove '{"Exchanges":[{"From":"IDR","To":"USD"}]}'
 	
