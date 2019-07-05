@@ -25,7 +25,7 @@ $ POST /exchange '{"from" : "IDR" , "to" : "USD"}'
 	
 	> **Response**
 	>{"id":"3e9f89fc-32de-4521-b76c-2f5686776e91", "result":"success"}
-- View Exchange Rate from Last 7 Days
+- View Exchange Rate from Last 7 Days http://localhost:8080/api/v1/last7
 	>**Request**
 	>$ POST /last7 '{"from":"IDR", "to":"USD", "date":"2019-07-05"}'
 	
