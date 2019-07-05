@@ -14,13 +14,15 @@ api testing is done by the help of RESTY (https://github.com/micha/resty)
 
 	> **Request** 
 $ POST /exchange '{"from" : "IDR" , "to" : "USD"}'  
-	>**Response**
+	
+	> **Response**
 	>{"id":"5a72f494-159c-440b-a352-d2de61ae1d18", "result":"success"}
 
 - Insert Exchange Daily Rate [http://localhost:8080/api/v1/daily](http://localhost:8080/api/v1/daily) [post]
 
 	> **Request**
-$	POST /daily '{"date":"2019-07-05", "from":"IDR", "To":"USD", "rate":"0.000071"}'
+	$ POST /daily '{"date":"2019-07-05", "from":"IDR", "To":"USD", "rate":"0.000071"}'
+	
 	> **Response**
 	>{"id":"3e9f89fc-32de-4521-b76c-2f5686776e91", "result":"success"}
 - View Exchange Rate from Last 7 Days
